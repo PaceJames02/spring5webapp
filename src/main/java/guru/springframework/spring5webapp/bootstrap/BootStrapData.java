@@ -41,14 +41,14 @@ public class BootStrapData implements CommandLineRunner {
         publisherRepository.save(pearson);
 
         Author rod = new Author("Rod", "Johnson");
-        Book noEBJ = new Book("J2EE Development without EBJ", "845248285");
-        rod.getBooks().add(noEBJ);
-        noEBJ.getAuthors().add(rod);
-        noEBJ.setPublisher(pearson);
-        pearson.getBooks().add(noEBJ);
+        Book noEJB = new Book("J2EE Development without EJB", "845248285");
+        rod.getBooks().add(noEJB);
+        noEJB.getAuthors().add(rod);
+        noEJB.setPublisher(pearson);
+        pearson.getBooks().add(noEJB);
 
         authorRepository.save(rod);
-        bookRepository.save(noEBJ);
+        bookRepository.save(noEJB);
         publisherRepository.save(pearson);
 
         System.out.println("Number of books: "+bookRepository.count());
